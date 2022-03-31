@@ -1,0 +1,17 @@
+<div class="c-search">
+  <input
+    [(ngModel)]="searchValue"
+    name="searchValue"
+    placeholder="Buscar"
+  />
+</div>
+<section class="b-list">
+  <figure *ngFor="let character of characterList | filter: searchValue">
+    <h5>{{ character.name }}</h5>
+    <img
+      [routerLink]="['/characters', character._id]"
+      src="{{ character.image }}"
+      alt="{{ character.name }}"
+    />
+  </figure>
+</section>

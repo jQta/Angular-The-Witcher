@@ -1,0 +1,49 @@
+<figure class="b-detail">
+  <ng-container *ngIf="characterInfo">
+    <h3>{{ characterInfo.name }}</h3>
+    <div class="b-body">
+      <ng-container *ngIf="characterInfo.race"
+        ><p>Race: {{ characterInfo.race }}</p></ng-container
+      >
+      <ng-container *ngIf="characterInfo.gender"
+        ><p>Gender: {{ characterInfo.gender }}</p></ng-container
+      >
+      <ng-container *ngIf="characterInfo.status"
+        ><p>Status: {{ characterInfo.status }}</p></ng-container
+      >
+      <ng-container *ngIf="characterInfo.birth"
+        ><p>Birth: {{ characterInfo.birth }}</p></ng-container
+      >
+      <ng-container *ngIf="characterInfo.nationality"
+        ><p>Nationality: {{ characterInfo.nationality }}</p></ng-container
+      >
+      <ng-container *ngIf="characterInfo.titles"
+        ><p>Titles: {{ characterInfo.titles }}</p></ng-container
+      >
+      <ng-container *ngIf="characterInfo.proffesion"
+        ><p>Proffesion:{{ characterInfo.proffesion }}</p></ng-container
+      >
+      <ng-container *ngIf="characterInfo.affiliations"
+        ><p>Affiliations:{{ characterInfo.affiliations }}</p></ng-container
+      >
+      <ng-container *ngIf="characterInfo.abilities"
+        ><p>Abilities: {{ characterInfo.abilities }}</p></ng-container
+      >
+    </div>
+    <ul class="b-alias">
+      <ng-container *ngIf="characterInfo.alias">
+        <h3>Alias:</h3>
+        <ng-container *ngFor="let alias of characterInfo.alias"
+          ><li>{{ alias }}</li></ng-container
+        >
+      </ng-container>
+    </ul>
+  </ng-container>
+</figure>
+<div class="b-buttons">
+  <button [routerLink]="['/characters']">Atrás</button>
+  <button (click)="onUpdate(characterInfo)" [routerLink]="['/gestion']">
+    Editar
+  </button>
+  <button (click)="onDelete(characterInfo._id)">Eliminar</button>
+</div>

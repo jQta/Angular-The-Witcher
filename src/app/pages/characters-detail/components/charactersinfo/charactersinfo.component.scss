@@ -1,0 +1,46 @@
+.b-detail {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 8px;
+  padding: 16px;
+
+  color: white;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.b-body {
+  line-height: 24px;
+}
+.b-alias {
+  line-height: 28px;
+  letter-spacing: 4px;
+}
+
+h3 {
+  margin: 20px;
+  padding: 4px;
+  text-align: center;
+  color: white;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.b-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+
+  button {
+    padding: 2px;
+    border-radius: 8px;
+    border-color: transparent;
+    background-color: lightcoral;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+}

@@ -1,0 +1,18 @@
+<ng-container *ngIf="previewCharacter">
+<figure>
+    <div>
+      <img *ngIf="previewCharacter.image" src="{{ previewCharacter.image }}" alt="{{ previewCharacter.name }}" />
+      <p>{{ previewCharacter.name }}</p>
+      <p>{{ previewCharacter.alias }}</p>
+      <p>{{ previewCharacter.race }}</p>
+      <p>{{ previewCharacter.gender }}</p>
+      <p>{{ previewCharacter.status }}</p>
+      <p>{{ previewCharacter.birth }}</p>
+      <p>{{ previewCharacter.nationality }}</p>
+      <p>{{ previewCharacter.titles }}</p>
+      <p>{{ previewCharacter.proffesion }}</p>
+      <p>{{ previewCharacter.affiliations }}</p>
+      <p>{{ previewCharacter.abilities }}</p>
+    </div>
+</figure>
+</ng-container>

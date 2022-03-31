@@ -1,0 +1,93 @@
+<div class="b-container">
+  <div class="b-container__box">
+    <section class="c-gestion">
+      <form (ngSubmit)="onSubmit()" [formGroup]="characterForm">
+        <div class="c-gestion__form">
+          <p>Nombre del personaje:*</p>
+          <input formControlName="name" placeholder="Nombre de personaje" />
+          <app-form-errors
+            *ngIf="isSubmit"
+            [errors]="characterForm.controls['name'].errors"
+          ></app-form-errors>
+        </div>
+        <div class="c-gestion__form">
+          <p>Ruta de la imagen:</p>
+          <input
+            formControlName="image"
+            placeholder="Por ej: http://www.url.com/img"
+          />
+        </div>
+        <div class="c-gestion__form">
+          <p>Alias:</p>
+          <input formControlName="alias" placeholder="Alias del personaje" />
+        </div>
+        <div class="c-gestion__form">
+          <p>Raza:*</p>
+          <input formControlName="race" placeholder="Raza del personaje" />
+          <app-form-errors
+            *ngIf="isSubmit"
+            [errors]="characterForm.controls['race'].errors"
+          ></app-form-errors>
+        </div>
+        <div class="c-gestion__form">
+          <p>Género:*</p>
+          <input formControlName="gender" placeholder="Género del personaje" />
+          <app-form-errors
+            *ngIf="isSubmit"
+            [errors]="characterForm.controls['gender'].errors"
+          ></app-form-errors>
+        </div>
+        <div class="c-gestion__form">
+          <p>Status:</p>
+          <input
+            formControlName="status"
+            placeholder="Status del personaje, pj vivo o muerto"
+          />
+        </div>
+        <div class="c-gestion__form">
+          <p>Año de nacimiento:</p>
+          <input
+            formControlName="birth"
+            placeholder="Nacimiento del personaje"
+          />
+        </div>
+        <div class="c-gestion__form">
+          <p>Nacionalidad:</p>
+          <input
+            formControlName="nationality"
+            placeholder="Nacionalidad del personaje"
+          />
+        </div>
+        <div class="c-gestion__form">
+          <p>Títulos:</p>
+          <input formControlName="titles" placeholder="Títulos del personaje" />
+        </div>
+        <div class="c-gestion__form">
+          <p>Profesiones:</p>
+          <input
+            formControlName="proffesion"
+            placeholder="Profesiones del personaje"
+          />
+        </div>
+        <div class="c-gestion__form">
+          <p>Afiliaciones:</p>
+          <input
+            formControlName="affiliations"
+            placeholder="Afiliaciones del personaje"
+          />
+        </div>
+        <div class="c-gestion__form">
+          <p>Habilidades:</p>
+          <input
+            formControlName="abilities"
+            placeholder="Habilidades del personaje"
+          />
+        </div>
+        <button>Guardar</button>
+      </form>
+    </section>
+    <section class="b-preview">
+      <app-preview [previewCharacter]="newCharacter"></app-preview>
+    </section>
+  </div>
+</div>

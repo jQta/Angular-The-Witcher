@@ -1,0 +1,4 @@
+<span *ngIf="errors && errors['required']">El campo es requerido.</span>
+<span *ngIf="errors && errors['minlength']">El campo deberia tener minimo {{errors['minlength'].requiredLength}} caracteres</span>
+<span *ngIf="errors && errors['maxlength']">El campo deberia tener máximo {{errors['maxlength'].requiredLength}} caracteres</span>
+
