@@ -16,6 +16,16 @@
       background-color: rgba(22, 22, 22, 0.432);
       transition: all 0.75s ease-in-out;
       box-shadow: 0 0 20px 1px Crimson;
+
+      a {
+        color: white;
+        transition: all 0.75s ease-in-out;
+
+        &:hover {
+          color: Crimson;
+          transition: all 0.25s linear;
+        }
+      }
     }
   }
 
@@ -31,10 +41,6 @@
 
   a {
     color: black;
-
-    &:hover {
-      color: Crimson;
-    }
   }
 }
 

@@ -13,6 +13,10 @@ export class GestionComponent implements OnInit {
   newCharacter: any;
   characterId = this.characterService.defaultCharacter._id;
 
+  aboutApproved = {
+    name: "About Picture",
+    image: "../assets/approved.jpg"
+  }
   isSubmit: boolean = false;
 
   constructor(private formBuilder: FormBuilder, private characterService: CharactersService) {
