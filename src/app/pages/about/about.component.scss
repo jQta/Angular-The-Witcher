@@ -15,12 +15,17 @@
     margin: 24px;
   }
 
-  span {
+  a {
     font-style: italic;
     color: lightcoral;
 
     &:hover {
       color: lightcyan;
     }
+  }
+
+  span {
+    font-style: italic;
+    color: gold;
   }
 }
